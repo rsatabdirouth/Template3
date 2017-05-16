@@ -1,0 +1,510 @@
+@charset "utf-8";
+
+	@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext');
+
+*  {  padding: 0 ;  margin: 0 ; }
+
+body{
+    font-family: 'Lato', sans-serif !important;
+    background:#fff;
+    width:100%;
+    margin:0 auto;
+} 
+hr {
+  border-color: #F05F40;
+  border-width: 3px;
+  max-width: 50px;
+}
+hr.light {
+  border-color: white;
+}
+a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  list-style:none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin:0;
+	font-family: 'Lato', sans-serif !important;
+}
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom:8px;
+  font-weight:400 !important;
+  font-family: 'Lato', sans-serif !important;
+}
+label{
+	font-size:14px;
+	font-weight:400 !important;
+	margin-bottom:6px;
+	display:block;
+	color:#000000;
+}
+.clr{
+    clear: both ;    
+}
+.no-padding {
+  padding: 0;
+}
+.login_sec label{
+	color:#fff;
+}
+.container {
+    width: 1300px;
+}
+.allbody{
+	padding:30px 0;
+	background:url(../img/form_bg.jpg) no-repeat 0 0;
+}
+.form_body{
+	padding:20px 0 40px 0;
+}
+
+/*---------------header-----------------------*/
+
+	.header{
+		width:100%;
+		background:#fff;
+		height:110px;
+		border-top:10px solid #e3e3e3;
+	}
+	.reqButton{
+		position: absolute;
+		top: -10px;
+		right:16px;
+		background: #ff5e01;
+		border-radius: 0 0 10px 10px;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.28);
+	}
+	.reqButton a{
+		color: #fff !important;
+		padding: 8px 20px;
+		margin: 0;
+		text-decoration: none !important;
+		display: block;
+		font-size: 16px;
+	}
+	.callusText{
+		font-size:24px;
+		color:#2a2a2a;
+		text-align: right;
+		padding-top:55px;
+		font-weight:400;
+	}
+	.callusText span{
+		font-weight:600;
+	}
+	.header h1{
+		font-size:50px;
+		color:#2a2a2a;
+		padding-top:15px;
+		font-weight:400;
+	}
+
+/*----------------footer----------------------*/
+
+	.footer{
+		background:#212121;
+		padding:15px 0 10px 0;
+	}
+	.footer p{
+		font-size:14px;
+		color:#ffffff;
+		text-align:center;
+		margin:0 auto;
+		padding:0 0 10px 0;
+		font-weight:300;
+	}
+	.footer ul{
+		margin: 0 auto;
+		padding: 0 0 10px 0;
+		list-style: none;
+		width: 598px;
+	}
+	.footer ul li{
+		float:left;
+		color:#ffffff;
+		padding:5px 8px;
+		font-size:14px;
+		font-weight:300;
+	}
+	.footer ul li a{
+		color:#ffffff;
+		font-size:14px;
+		font-weight:300;
+		display:block;
+		transition: all 0.4s ease;
+	}
+	.footer ul li a:hover{
+		color:#ff8408;
+		text-decoration:none;
+	}
+	.footer ul li a:focus{
+		color:#ff8408;
+		text-decoration:none;
+	}
+	
+	
+/*---------------popup_section-------------------------*/
+
+	.modal {
+		overflow-y:inherit;
+	}
+	.modal-header{
+		padding: 12px;
+		background:#ff5e01;
+		border-bottom: 1px solid #ff5e01;
+		min-height: 16.428571429px;
+	}
+	.modal-title {
+		margin: 0;
+		line-height: 1.428571429;
+		color:#ffffff;
+		font-size:22px;
+		font-weight:300;
+	}
+	.modal-content {
+		position: relative;
+		background-color: #ffffff;
+		border:none;
+		border:none;
+		border-radius:1px;
+		-webkit-box-shadow: inherit;
+		box-shadow:inherit;
+		background-clip: padding-box;
+		outline: none;
+	}
+	.close_button{
+		background: #de5100;
+		border: none;
+		position: absolute;
+		right: 0px;
+		padding: 16px;
+		top: 0;
+	}
+	.submit_button {
+		border: none;
+		font-family: 'Lato', sans-serif;
+		padding: 8px 0;
+		text-align: center;
+		margin: 0 auto;
+		border-radius: 3px;
+		font-size:16px;
+		font-weight:500;
+		width:180px;
+		color:#ffffff;
+		display: block;
+		/* text-shadow: 2px 1px rgba(0, 0, 0, 0.3); */
+		background: #e6430b;
+		background: -moz-linear-gradient(top, #e6430b 0%, #ff551a 100%);
+		background: -webkit-linear-gradient(top, #e6430b 0%,#ff551a 100%);
+		background: linear-gradient(to bottom, #e6430b 0%,#ff551a 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6430b', endColorstr='#ff551a',GradientType=0 );
+	}
+	.popup_botton_div{
+		padding:10px 0 0 0;
+	}
+	.modal-dialog{
+		margin:80px auto;
+	}
+	/* .inputform2{
+		border: 1px solid #efefef;
+		padding:8px 10px;
+		text-align: left;
+		margin: 0 0 8px 0;
+		border-radius:none;
+		font-size: 14px;
+		font-weight: normal;
+		color: #2a2a2a;
+		width: 100%;
+		height:32px;
+		background-color: #fff;
+	} */
+	.res_frompadding{
+		padding:0 15px 0 0;
+	}
+	
+/*----------validation_error---------------*/
+
+.alert {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 2px 10px;
+    font-weight: 300 !important;
+    border: none;
+    border-radius: 0;
+    background-color: #d40000;
+    color: #fff;
+    text-align: center;
+	z-index: 11;
+}
+
+.has-error .help-block {
+    display: none;
+}
+
+.alert > p, .alert > ul {
+    display: none;
+}
+
+strong {
+    font-weight: 300 !important;
+}
+
+/**
+ * Default CSS theme for jQuery-Form-Validator.
+ * @author Victor Jonsson <victorjonsson.se>
+ */
+
+
+/* Input element having an invalid value */
+select.error,
+input.error {
+    border-color: #b94a48;
+    background-image:url(../img/red_cross.png);
+    background-position: right 7px center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+/* Input element having a valid value */
+select.valid,
+input.valid {
+    border-color: #468847;
+    background-image:url(../img/valid_check.png);
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+/* File inputs with invalid value */
+input[type="file"].error {
+    color: #b94a48;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* File inputs with valid value */
+input[type="file"].valid {
+    color: #468847;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/* Element showing the help text declared in data-validation-help */
+span.help {
+    color: #999;
+    font-size: 90%;
+}
+
+/* Here you can style the look of the input while server being
+  requested when using data-validation="server" */
+select.async-validation,
+input.async-validation,
+select.validating-server-side, /* deprecated */
+input.validating-server-side /* deprecated */ {
+    opacity: 0.5;
+    background-image: url('data:image/gif;base64,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');
+    background-position: right 5px center;
+    background-repeat: no-repeat;
+    background-color: #FFF;
+}
+
+/* Here you can style the entire form while server being
+  requested when using data-validation="server" */
+form.async-validation,
+form.validating-server-side /* deprecated */ {
+}
+#requestCallForm .alert{
+	top: -20px !important;
+}
+
+
+/*----------------formsection--------------------*/
+	.body_section{
+		padding-bottom:30px;
+	}
+	.left_bodyfrom{
+		background:url(../img/formbg.jpg) repeat 0 0;
+		padding:25px 20px 15px 20px;
+	}
+	.form_title{
+		padding:0px 0 20px 0;
+		position:relative;
+	}
+	.form_title h2{
+		font-size:22px;
+		font-weight:500;
+		color:#1f1f1f;
+		margin:0;
+		padding:0;
+		line-height:22px;
+	}
+	.form_title h2 span{
+		display:block;
+		padding:10px 0 0 0;
+		font-size:14px;
+		font-weight:400;
+		color: #1f1f1f;
+	}
+	.res_section2{
+		padding:0;
+	}
+	.res_section3{
+		padding:0 4px 0 0;
+	}
+	.res_section3 label{
+		color:#000;
+		font-size:13px;
+		font-weight:400;
+	}
+
+.inputformNo{
+	border: none;
+	padding:10px 8px;
+	text-align: left;
+	margin: 0;
+	border-radius: none;
+	font-size: 14px;
+	font-weight:400;
+	font-weight: normal;
+	color: #000;
+	width: 100%;
+	background-color: #fff;
+	border:1px solid #cccccc;
+}
+	.inputform{
+		border: 1px solid #efefef;
+		padding:6px 10px;
+		text-align: left;
+		margin: 0 0 8px 0;
+		border-radius:none;
+		font-size: 14px;
+		font-weight: normal;
+		color: #2a2a2a;
+		width: 100%;
+		height:38px;
+		background-color: #fff;
+	}
+	.inputform2{
+		border: 1px solid #efefef;
+		padding:7px 10px;
+		text-align: left;
+		margin: 0 0 8px 0;
+		border-radius:none;
+		font-size: 14px;
+		font-weight: normal;
+		color: #2a2a2a;
+		width: 100%;
+		height:38px;
+		background-color: #fff;
+	}
+	.submit_buttonnew {
+		border: none;
+		padding: 8px 0;
+		text-align: center;
+		margin:10px auto;
+		border-radius: 3px;
+		font-size: 18px;
+		font-weight: 500;
+		width: 230px;
+		color: #ffffff;
+		display: block;
+		background: #e6430b;
+		background: -moz-linear-gradient(top, #e6430b 0%, #ff551a 100%);
+		background: -webkit-linear-gradient(top, #e6430b 0%,#ff551a 100%);
+		background: linear-gradient(to bottom, #e6430b 0%,#ff551a 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6430b', endColorstr='#ff551a',GradientType=0 );
+	}
+
+
+/*---------------slider-----------------------*/
+
+	.slider_bg{
+		height:310px;
+		background:url(../img/slider_pic.jpg) no-repeat 0 0;
+		background-size:cover;
+	}
+	.slider_capsation{
+		background: rgba(233, 101, 30, 0.9);
+		padding: 50px 50px 20px 95px;
+		height: 310px;
+	}
+	.slider_capsation h3{
+		color:#fff;
+		padding-bottom:20px;
+		font-size:28px;
+	}
+	.slider_capsation p{
+		color:#fff;
+		padding-bottom:20px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	
+/*------------------right_pert-----------------*/
+
+	.bodytext{
+		padding:10px 0;
+	}
+	.bodytext h3{
+		font-size: 20px;
+		/* color: #2d6d3c; */
+		color: #19343d;
+		padding: 0;
+		margin: 10px 0 15px 0;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: left;
+	}
+	.bodytext p{
+		font-size: 14px;
+		color: #606060;
+		padding: 0 0 10px 0;
+		margin: 0;
+		font-weight: 400;
+		text-align: justify;
+		line-height: 20px;
+	}
+	.bodytext_nav{
+		margin:10px 0;
+	}
+	.bodytext_nav li{
+		padding: 5px 0 5px 18px;
+		display:block;
+		background:url(../img/bulet_point.png) no-repeat 0 10px;
+	}
+	
+/*-------------brand_section-----------------*/
+
+	.brand_section{
+		background:#f7f7f7;
+		padding:15px;
+		margin-top:5px;
+	}
+	.brandPic{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.brandPic li{
+		width:93px;
+		padding:5px;
+		margin-bottom:5px;
+		list-style:none;
+		float:left;
+	}

@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+@media (max-width: 320px){
+	.send_req a{
+		width:100%;
+	}
+	.calbackSection li a {
+		font-size: 12px !important;
+		padding: 6px 11px !important;
+	}
+	
+}
+@media (max-width: 360px){
+	
+}
+@media (max-width: 480px){
+	.reqButton {
+		right: 0;
+	}
+	.reqButton a {
+		padding: 5px 10px;
+		font-size: 14px;
+	}
+}
+@media (max-width: 640px){
+	
+}
+
+@media (max-width: 768px) {
+	.res_container{
+		padding:0;
+	}
+	.calbackSection{
+		float:inherit !important;
+	}
+	.calbackSection li a{
+		font-size: 13px;
+		padding: 6px 13.3px;
+	}
+	.call_Icon{
+		padding-right:4px;
+	}
+	.call_Icon2{
+		padding-left:4px;
+	}
+	.sub_brand{
+		padding: 0;
+	}
+	.middle_body h3 {
+		font-size: 17px;
+	}
+	.footer ul li {
+		padding: 5px 7px;
+	}
+	.form_title h2 {
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.container{
+		width:100%;
+	}
+	.img-responsive{
+		width:100%;
+		text-align:center;
+		margin-bottom:10px;
+	}
+	.header{
+		height:auto;
+	}
+	.footer ul{
+		width:100%;
+	}
+	.house_pic {
+		width: 100%;
+	}
+	.background_Picture {
+		margin:0;
+		height: auto;
+		overflow: inherit;
+	}
+	.img_caption h1 {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.les_padding{
+		padding:0;
+	}
+	.left_cone{
+		display:none;
+	}
+	.right_cone{
+		display:none;
+	}
+	.modal-body {
+		padding: 20px 0;
+	}
+	.form_section{
+		margin:0;
+	}
+	.res_frompadding{
+		padding:0;
+	}
+	.respadding{
+		padding:0;
+	}
+	.callusText {
+		font-size: 20px;
+		text-align: center;
+		padding: 20px;
+	}
+	.header h1 {
+		font-size:46px;
+		text-align: center;
+		padding-top:30px;
+	}
+	.slider_capsation {
+		padding:40px 20px;
+		height:auto;
+	}
+	.slider_bg{
+		height:auto;
+	}
+	
+}
+/* @media (max-width: 1024px) {
+	
+	.container{
+		width:100%;
+	}
+	.img-responsive{
+		width:100%;
+		text-align:center;
+		margin-bottom:10px;
+	}
+	.header{
+		height:auto;
+	}
+	.footer ul{
+		width:100%;
+	}
+	.house_pic {
+		width: 100%;
+	}
+	.background_Picture {
+		margin:0;
+		height: auto;
+		overflow: inherit;
+	}
+	.img_caption h1 {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.les_padding{
+		padding:0;
+	}
+	.left_cone{
+		display:none;
+	}
+	.right_cone{
+		display:none;
+	}
+	.modal-body {
+		padding: 20px 0;
+	}
+	.form_section{
+		margin:0;
+	}
+} */

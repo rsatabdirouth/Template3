@@ -1,0 +1,388 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="img/x-icon"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link href= @Url.Content("~/content/css/bootstrap.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("~/content/css/style.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("~/content/css/responsive.css") rel="stylesheet" type="text/css">
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="display:none;">
+
+    <!--request_call_back popup-->
+
+    <div class="modal fade" id="requestCallModal" role="dialog">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <form id="requestCallForm" novalidate>
+                    <div class="modal-header">
+                        <button type="button" class="close_button" data-dismiss="modal"><img src=@Url.Content("~/Content/img/close.png") alt="close"></button>
+                        <h4 class="modal-title">Request a call back</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-6 from_detailTextres">
+                            <label>Name</label>
+                            <input type="text" data-validation="required" name="firstName" id="firstName" placeholder="Enter full name" class="inputform2"
+                                   required />
+                        </div>
+                        <div class="col-sm-6 from_detailTextres">
+                            <label>Email</label>
+                            <input type="text" data-validation="email" name="email" id="email" placeholder="Enter email" class="inputform2" required />
+                        </div>
+                        <div class="clr"></div>
+
+                        <div class="col-sm-6 from_detailTextres">
+                            <label>Phone Number</label>
+                            <input type="text" name="homePhone" id="homePhone" data-validation="ukphone" placeholder="Enter phone number" class="inputform2"
+                                   required />
+                        </div>
+                        <div class="col-sm-6 from_detailTextres">
+                            <label>Best Time To Call</label>
+                            <select class="inputform2" name="contactTime" id="contactTime" data-validation="required">
+                                <option value="">Select...</option>
+                                <option value="1">Morning</option>
+                                <option value="2">Afternoon</option>
+                                <option value="3">Evening</option>
+                                <option value="4">Anytime</option>
+                            </select>
+                        </div>
+                        <div class="clr"></div>
+                        <input type="hidden" id="LeadCategory" name="LeadCategory" value="3">
+                        <div class="popup_botton_div">
+                            <div class="btnName" style="display:none;">Call me back</div>
+                            <input type="submit" id="requestSubmit" class="submit_button" value="Call me back">
+                        </div>
+                    </div>
+                    <div class="modal-body2" style="display:none">
+                        <img src=@Url.Content("~/Content/img/susic.png") alt="" class="" />
+                        <h3>Message sent successfully </h3>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--End request_call_back popup-->
+    <!--header-->
+    <div class="header">
+        <div class="container" style="position:relative;">
+            <div class="col-sm-5">
+                <h1>Logo</h1>
+            </div>
+            <div class="col-sm-7 no-padding">
+                <h2 class="callusText">Call Us : <span>000000 00000</span></h2>
+            </div>
+            <div class="clr"></div>
+            <div class="reqButton">
+                <a href="#" data-toggle="modal" data-target="#requestCallModal">
+
+              
+                   
+
+                    <i><img src=@Url.Content("~/Content/img/req_icon.png") alt="callbackicon" /></i> &nbsp; Request a call back
+                </a>
+            </div>
+        </div>                  
+    </div>
+    <!--end_header-->
+    <div class="clr"></div>
+    <!--main_body-->
+    <div class="main_body">
+        <div class="slider_bg">
+            <div class="col-sm-5 slider_capsation">
+                <h3>Need a Helping Hand?</h3>
+                <p>
+                    Do you need some help finding a mortgage that is really right for you? We offer 'whole of market' mortgage advice, meaning we have access to many different lenders and different mortgage products.
+                </p>
+            </div>
+        </div>
+        <div class="container respadding" style="position:relative;">
+            <div class="body_section">
+                <div class="col-sm-5 respadding">
+                    <div class="left_bodyfrom">
+                        <div class="form_section">
+                            <div class="form_title">
+                                <h2>
+                                    Start Your Mortgage Enquiry Now
+                                    <span>
+                                        It’s all very simple, free for you to use and with absolutely no obligations! Simply answer a few short questions on the form below
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="form_fild">
+                                <form id="homeForm" method="POST" novalidate>
+                                    <div class="col-md-6 res_section3">
+                                        <div class="col-sm-4 col-xs-4 res_section3">
+                                            <label class="homelabel">Title</label>
+                                            <select class="inputform" name="Title" id="Title" type="select-one" style="padding:5px 1px;">
+                                                <option value="Mr">Mr</option>
+                                                <option value="Mrs">Mrs</option>
+                                                <option value="Miss">Miss</option>
+                                                <option value="Ms">Ms</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-8 col-xs-8 res_section2">
+                                            <label>First Name</label>
+                                            <input type="text" data-validation="required" name="firstName" id="firstName" placeholder="Enter first name" class="inputform"
+                                                   required="">
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Last Name</label>
+                                        <input type="text" data-validation="required" name="lastName" id="lastName" placeholder="Enter last name" class="inputform"
+                                               required="">
+                                    </div>
+                                    <div class="clr"></div>
+
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Mobile Number</label>
+                                        <input type="text" data-validation="required" data-validation="ukphone" name="homePhone" id="homePhone" placeholder="Enter mobile no."
+                                               class="inputform" required="">
+                                    </div>
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Alternative Number</label>
+                                        <input type="text" data-validation="ukphone" data-validation-optional="true" name="workphone" id="workphone" placeholder="Enter alternative no."
+                                               class="inputform" required="">
+                                    </div>
+                                    <div class="clr"></div>
+
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Email Address</label>
+                                        <input type="text" data-validation="required" name="email" id="email" placeholder="Enter email address" class="inputform"
+                                               required="">
+                                    </div>
+                                    <div class="col-sm-6 res_section3">
+                                        <label class="homelabel">Post Code</label>
+                                        <input type="text" data-validation="required" name="postcode" id="postcode" data-validation="ukpostcode" placeholder="Enter postcode"
+                                               class="inputform" required="">
+                                    </div>
+                                    <div class="clr"></div>
+
+                                    <div class="col-sm-6 res_section3">
+                                        <label>House name or number</label>
+                                        <input type="text" data-validation="required" name="address1" id="address1" placeholder="Enter house name or no." class="inputform"
+                                               required="">
+                                    </div>
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Looking for</label>
+                                        <select class="inputform" name="ProductName" id="ProductName" type="select-one">
+                                            <option value="Residential Remortgage">Residential Remortgage </option>
+                                            <option value="Residential Purchase">Residential Purchase </option>
+                                            <option value="Buy To Let Remortgage">Buy to Let Remortgage </option>
+                                            <option value="Buy To Let Purchase">Buy to Let Purchase</option>
+                                            <option value="Other Mortgage">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="clr"></div>
+
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Value of property ( &pound; )</label>
+                                        <input type="text" data-validation="number" name="PropertyValue" id="PropertyValue" placeholder="Enter value of property"
+                                               class="inputform" required="">
+                                    </div>
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Mortgage amount ( &pound; ) </label>
+                                        <input type="text" data-validation="number" name="LoanValue" id="LoanValue" placeholder="Enter mortgage amount" class="inputform"
+                                               required="">
+                                    </div>
+                                    <div class="clr"></div>
+
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Term</label>
+                                        <select name="Period" id="Period" class="inputform" type="select-one">
+                                            <option value="5">5 years</option>
+                                            <option value="6">6 years</option>
+                                            <option value="7">7 years</option>
+                                            <option value="8">8 years</option>
+                                            <option value="9">9 years</option>
+                                            <option value="10">10 years</option>
+                                            <option value="11">11 years</option>
+                                            <option value="12">12 years</option>
+                                            <option value="13">13 years</option>
+                                            <option value="14">14 years</option>
+                                            <option value="15">15 years</option>
+                                            <option value="16">16 years</option>
+                                            <option value="17">17 years</option>
+                                            <option value="18">18 years</option>
+                                            <option value="19">19 years</option>
+                                            <option value="20">20 years</option>
+                                            <option value="21">21 years</option>
+                                            <option value="22">22 years</option>
+                                            <option value="23">23 years</option>
+                                            <option value="24">24 years</option>
+                                            <option selected="selected" value="25">25 years</option>
+                                            <option value="26">26 years</option>
+                                            <option value="27">27 years</option>
+                                            <option value="28">28 years</option>
+                                            <option value="29">29 years</option>
+                                            <option value="30">30 years</option>
+                                            <option value="31">31 years</option>
+                                            <option value="32">32 years</option>
+                                            <option value="33">33 years</option>
+                                            <option value="34">34 years</option>
+                                            <option value="35">35 years</option>
+                                            <option value="36">36 years</option>
+                                            <option value="37">37 years</option>
+                                            <option value="38">38 years</option>
+                                            <option value="39">39 years</option>
+                                            <option value="40">40 years</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 res_section3">
+                                        <label>Type of rate</label>
+                                        <select class="inputform" name="RateType" id="RateType" type="select-one">
+                                            <option value="1">Fixed</option>
+                                            <option value="4">Tracker </option>
+                                            <option value="2">Variable </option>
+                                            <option value="5">Not sure</option>
+                                        </select>
+                                    </div>
+                                    <div class="clr"></div>
+
+                                    <div class="missed_div">
+                                        <div class="col-sm-10" style="padding-left:0;">
+                                            <p>
+                                                I have missed a mortgage or loan repayment in the past 36 months or been declared bankrupt, had CCJ’s, Defaults or entered
+                                                into an IVA in the past 6 years?
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-2 no-padding">
+                                            <select class="inputformNo" name="AdverseCredit" id="AdverseCredit" type="select-one">
+                                                <option value="false">No </option>
+                                                <option value="true">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <div class="send_req">
+                                        <div class="submit_buttonnew" style="display:none;">Submit</div>
+                                        <input type="submit" id="homeFormSubmit" class="submit_buttonnew" value="Submit">
+                                    </div>
+                                    <p>
+                                        By using this form you are consenting to your information being passed to a mortgage broker or appointed representative who
+                                        will contact you. This information may be used by us or selected partners to advise you of other useful products
+                                        or services that we feel you would be interested in.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand_section">
+                        <p>Compare leading lenders including...</p>
+                        <ul class="brandPic">
+                            <li><img src=@Url.Content("~/Content/img/brand_1.jpg") alt="brand" style="width:100%;" /></li>
+                            <li><img src=@Url.Content("~/Content/img/brand_2.jpg") alt="brand" style="width:100%;" /></li>
+                            <li><img src=@Url.Content("~/Content/img/brand_3.jpg") alt="brand" style="width:100%;" /></li>
+                            <li><img src=@Url.Content("~/Content/img/brand_4.jpg") alt="brand" style="width:100%;" /></li>
+                            <li><img src=@Url.Content("~/Content/img/brand_5.jpg") alt="brand" style="width:100%;" /></li>
+                            <!-- <li><img src="img/brand_6.jpg" alt="brand" style="width:100%;"/></li>
+                            <li><img src="img/brand_7.jpg" alt="brand" style="width:100%;"/></li>
+                            <li><img src="img/brand_8.jpg" alt="brand" style="width:100%;"/></li> -->
+                            <div class="clr"></div>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col-sm-7">
+                    <div class="bodytext">
+                        <h3>Macclesfield & Cheshire Mortgage Advisors</h3>
+                        <p>
+                            Marquis Financial Services is a professional mortgage and financial services provider based in Cheshire. We have access to the whole of the UK mortgage market and using our expertise and a combined experience of over 75 years can advise, recommend and arrange mortgages and insurance policies that are specifically tailored to your individual needs.
+                        </p>
+                        <p>
+                            <b>We believe that our client's success determines our own, so we ensure both, by working closely with our clients to ensure their financial goals.</b>
+                        </p>
+                        <p>
+                            All of our advisors are fully qualified in mortgage and insurance advice and committed to providing our clients with an exceptional level of service and the best possible deal to suit their needs. We aim to provide our clients with real time updates on the progression of any applications and have a single point of contact too ensure a personal service.
+                        </p>
+                        <div class="clr"></div>
+
+                        <h3>So what’s special about Mortgage ?</h3>
+                        <ul class="bodytext_nav">
+                            <li>We were established in 1999</li>
+                            <li>We are totally unbiased and independent – we work for our clients not the lender</li>
+                            <li>We are Directly Regulated by the Financial Conduct Authority and have access to every lender - not a small panel.</li>
+                            <li>We always back up our recommendations with a detailed letter explaining why we have made a recommendatio</li>
+                            <li>
+                                We are highly accessible – in and out of the office hours, online, by landline and mobile, by email, text, Facebook and Twitter
+                            </li>
+                            <li>
+                                Our expert advisers cover the whole UK but being a Welsh based company we know South Wales very well. Especially Cardiff, Swansea, Newport, Barry, Monmouth, Neath, Cwmbran, Bridgend, Brecon, Merthyr Tydfil, Caerphilly, Port Talbot, Pontypridd, Penarth and Abergavenny.
+                            </li>
+                        </ul>
+                        <p>
+                            We specialise in all facet of property ownership for residential and commercial use. We are driven by the desire to simplify the property ownership process and save you money whether you are remortgaging, buying your first home, buying you next home, buying a rental property or investing in property.
+                        </p>
+                        <div class="clr"></div>
+
+                        <h3>Valuation of your New Home</h3>
+                        <p>
+                            When arranging a mortgage, after the initial assessment of the application, all lenders will want a valuation carried out by an independent surveyor on the property you are buying which unfortunately is usually at your costs. The lender will only want a “basic” valuation carried out, which is really only for their purposes and will not provide you with any report.
+                        </p>
+                        <p>
+                            As purchasing a property for the first time is a big step for most people, both financially and emotionally, you may want a more comprehensive survey to be carried out, one which will provide you with a more in depth view of the property, potentially highlighting any work that may be required to be carried out on the property in the near future.
+                        </p>
+                        <p>
+                            There are three main types of valuations/surveys and each comes with a different cost, these can vary considerably from lender to lender but below we have provided a guide of the likely costs based on a property of £150,000
+                        </p>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <ul>
+                <li><a href="javascript:void(0);">About Us</a></li>
+                <li>|</li>
+                <li><a href="javascript:void(0);">Contact Us </a></li>
+                <li>|</li>
+                <li><a href="T&Cs.html">Terms & Conditions</a></li>
+                <li>|</li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                <li>|</li>
+                <li><a href="javascript:void(0);"> How it works</a></li>
+                <div class="clr"></div>
+            </ul>
+            <p>
+                Think carefully before securing other debts against your home. Your home may be repossessed if you do not keep up repayments on a mortgage or debt secured on it.
+            </p>
+            <!-- <p>Copyright 2011-2016 © www.top10mortgages.co.uk. All rights reserved. Top10Mortgages.co.uk and the logo are registered trademarks of TT mortgage.</p> -->
+            <p>Copyright © xyz Limited. All rights reserved. Powered by XYZ.</p>
+        </div>
+    </div>
+    <!--end_footer-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script type="text/javascript" src=@Url.Content("~/content/js/bootstrap.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/content/js/myScript.js")></script>
+</body>
+</html>
+
